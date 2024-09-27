@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mosaico</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- copia original -->
+    <h1>Mi mosaico</h1>
+    <div class="padre">
+      <!-- Principal fila 1 agrupacion fila -->
+      <div class="fila-padre" style="height: 40%">
+        <div class="cubo hijo-A"></div>
+        <div class="cubo hijo-B"></div>
+      </div>
+      <!-- Principal fila 2 agrupacion columna -->
+      <div class="columna-padre" style="height: 60%">
+        <div class="cubo hijo-C" style="height: 25%"></div>
+        <!-- integracion 1 agrupacion fila -->
+        <div class="fila-padre" style="height: 25%">
+          <div class="cubo hijo-E"></div>
+          <div class="cubo hijo-F"></div>
+          <div class="cubo hijo-G"></div>
+        </div>
+        <div class="cubo hijo-D" style="height: 50%"></div>
+      </div>
+    </div>
+    <hr />
+    <!-- copia explicativa -->
+    <h1>Mi mosaico explicado</h1>
+    <div class="padre">
+      <!-- Principal fila 1 agrupacion fila -->
+      <p>fila 1</p>
+      <div class="fila-padre explicativo" style="height: 22%">
+        <div class="cubo hijo-A"></div>
+        <div class="cubo hijo-B"></div>
+      </div>
+      <!-- Principal fila 2 agrupacion columna -->
+      <p>fila 2</p>
+      <div class="columna-padre explicativo borde" style="height: 60%">
+        <p>fila 2.1</p>
+        <div class="cubo explicativo hijo-C" style="height: 14%"></div>
+        <!-- integracion 1 agrupacion fila -->
+        <p>fila 2.2</p>
+        <div class="fila-padre explicativo borde" style="height: 16%">
+          <div class="cubo hijo-E"></div>
+          <div class="cubo hijo-F"></div>
+          <div class="cubo hijo-G"></div>
+        </div>
+        <p>fila 2.3</p>
+        <div class="cubo hijo-D explicativo" style="height: 23%"></div>
+      </div>
+    </div>
+  </body>
+</html>

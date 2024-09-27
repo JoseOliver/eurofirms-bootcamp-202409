@@ -1,0 +1,68 @@
+.tab-n1 {
+  scale: 0.8;
+}
+.ejemplo {
+  display: block;
+  border: solid 1px red;
+}
+.cubo {
+  border: solid 1px black;
+}
+.padre {
+  width: 10cm;
+  height: 10cm;
+  display: block;
+  margin: 10px;
+}
+.fila-padre {
+  display: flex;
+}
+.columna-padre {
+  display: block;
+}
+/* hijos de fila padre */
+.hijo-A {
+  background-color: aqua;
+  width: 20%;
+}
+.hijo-B {
+  background-color: lightcoral;
+  width: 80%;
+}
+.hijo-E {
+  background-color: cadetblue;
+  width: 30%;
+}
+.hijo-F {
+  background-color: beige;
+  width: 40%;
+}
+.hijo-G {
+  background-color: chocolate;
+  width: 30%;
+}
+/* end */
+/* hijos de columna padre */
+.hijo-C {
+  background-color: blueviolet;
+  height: 30%;
+}
+.hijo-D {
+  background-color: greenyellow;
+  height: 40%;
+}
+/* end */
+/* explicativo */
+.explicativo {
+  padding: 5px;
+  margin: 0 5px;
+}
+.borde {
+  border: 1px solid red;
+}
+p {
+  width: 100%;
+  text-align: center;
+  margin: 2px;
+}
+/* end */

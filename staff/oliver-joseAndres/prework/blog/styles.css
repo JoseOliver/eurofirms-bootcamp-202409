@@ -1,0 +1,86 @@
+.container {
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+  display: block;
+  min-width: 500px;
+}
+.flex {
+  display: flex;
+}
+header {
+  min-width: 530px !important;
+}
+h1 {
+  min-width: 280px;
+}
+.busqueda {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100vw;
+  gap: 1em;
+}
+.busqueda-combo {
+  display: flex;
+}
+.busqueda-input {
+}
+.busqueda-button {
+}
+.busqueda-perfil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+main {
+  margin-right: 30px !important;
+}
+.main-izquierda {
+  width: 60%;
+  display: block;
+}
+.section-small {
+  margin: 10px;
+  padding: 0 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  max-height: 100px;
+}
+.section {
+  margin: 10px;
+  padding: 0 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.secciones2 {
+  justify-content: space-evenly;
+}
+.secciones3 {
+  display: flex;
+  justify-content: flex-start;
+}
+.main-derecha {
+  width: 40%;
+}
+img {
+  margin: 30px;
+  width: -webkit-fill-available;
+}
+footer {
+  margin-right: 30px !important;
+  margin-left: 120px !important;
+  min-width: 385px !important;
+  justify-content: end;
+}
+.boton {
+  width: 100px;
+  padding: 10px;
+  text-align: center;
+  border: 2px solid blue;
+}

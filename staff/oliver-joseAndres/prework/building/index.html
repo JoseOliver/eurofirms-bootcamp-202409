@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casita responsive</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Casita flex</h1>
+    <h3>Edita el tamaño de pantalla de salida:</h3>
+    <div class="barra">
+      <span>Min</span>
+      <input
+        type="range"
+        value="100"
+        style="width: 90vw"
+        onchange="changeWidth(this.value);"
+      />
+      <span>Max</span>
+    </div>
+    <div id="casita" class="body-wrap">
+      <div class="casita-global">
+        <div class="chimenea"></div>
+        <div class="tejado"></div>
+        <div class="base">
+          <div class="ventanas">
+            <div class="ventana"><span># # # # # # # #</span></div>
+            <div class="ventana"><span># # # # # # # #</span></div>
+          </div>
+          <div class="puerta-wrap">
+            <div class="puerta">
+              <div class="semicirculo"></div>
+              <div class="cuadrado">
+                <div class="pomo"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function changeWidth(width) {
+        let casita = document.querySelector("#casita");
+        casita.style.setProperty("max-width", width + "vw");
+      }
+    </script>
+  </body>
+</html>
