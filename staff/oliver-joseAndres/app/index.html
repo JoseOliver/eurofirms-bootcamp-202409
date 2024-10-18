@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>App</h1>
+
+    <section id="welcome">
+      <h2>Welcome!</h2>
+
+      <p>
+        Please, <a href="#" onclick="openRegister()">Register</a> or
+        <a href="#" onclick="openLogin()">Login</a>.
+      </p>
+    </section>
+
+    <section id="register" class="invisible">
+      <h2>Register</h2>
+      <a href="#" onclick="back('register')">Back...</a>
+      <form id="registerForm" class="flex-col">
+        <label for="usernameRegister">Username</label>
+        <input
+          type="text"
+          id="usernameRegister"
+          required
+          pattern="^\w+\S$"
+          title="Deben ser caracteres tipicos, tener al menos 2 caracteres y que no sean espacios"
+        />
+
+        <label for="email">E-mail</label>
+        <input
+          type="email"
+          id="email"
+          required
+          pattern="^\w+@\w+\.\w{2,3}$"
+          title="Debe ser un formato de email valido"
+        />
+
+        <label for="name">Name</label>
+        <input type="text" id="name" required />
+
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="passwordRegister"
+          required
+          pattern="^\w+\S$"
+          title="Deben ser caracteres tipicos, tener al menos 2 caracteres y que no sean espacios"
+        />
+
+        <button type="submit" onclick="register()">Register</button>
+      </form>
+    </section>
+
+    <section id="login" class="invisible">
+      <h2>Login</h2>
+      <a href="#" onclick="back('login')">Back...</a>
+      <form id="loginForm" class="flex-col">
+        <label for="usernameLogin">username</label>
+        <input
+          type="text"
+          id="usernameLogin"
+          required
+          pattern="^\w+\S$"
+          title="Deben ser caracteres tipicos, tener al menos 2 caracteres y que no sean espacios"
+        />
+
+        <label for="passwordLogin">password</label>
+        <input
+          type="password"
+          id="passwordLogin"
+          required
+          pattern="^\w+\S$"
+          title="Deben ser caracteres tipicos, tener al menos 2 caracteres y que no sean espacios"
+        />
+        <button type="submit" onclick="login()">Login</button>
+      </form>
+    </section>
+
+    <section id="home" class="invisible">
+      <h2>Home</h2>
+
+      <p>Hello, <span id="nombre"></span>!</p>
+
+      <button onclick="logout()">Logout</button>
+    </section>
+
+    <div class="message invisible" id="successRegister">
+      <span
+        class="closebtn"
+        onclick="this.parentElement.classList.add('invisible')"
+        >&times;</span
+      >
+      <strong>Se ha registrado correcamente!</strong>
+    </div>
+
+    <div class="alert invisible" id="errorRegister">
+      <span
+        class="closebtn"
+        onclick="this.parentElement.classList.add('invisible')"
+        >&times;</span
+      >
+      <strong>No se ha registrado!</strong> El usuario ya esta registrado.
+    </div>
+
+    <div class="alert invisible" id="errorLogin">
+      <span
+        class="closebtn"
+        onclick="this.parentElement.classList.add('invisible')"
+        >&times;</span
+      >
+      <strong>No se ha hecho login!</strong> El usuario no esta registrado o la
+      contraseña es erronea.
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
