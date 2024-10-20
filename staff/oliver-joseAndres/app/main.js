@@ -18,6 +18,7 @@ function login() {
   let username = document.querySelector("#usernameLogin").value;
   let pass = document.querySelector("#passwordLogin").value;
   let to_login = -1;
+  let errorLoginMessage = document.querySelector("#errorLogin");
   usuarios.forEach((element) => {
     if (element.username == username && element.password == pass) {
       to_login = usuarios.indexOf(element);
@@ -26,7 +27,10 @@ function login() {
   });
   if (to_login == -1) {
     logged = -1;
-    document.querySelector("#errorLogin").classList.remove("invisible");
+    errorLoginMessage.classList.remove("invisible");
+    setTimeout(() => {
+      close(errorLoginMessage);
+    }, 4000);
     back("login");
   } else {
     logged = to_login;
@@ -48,6 +52,8 @@ function register() {
 
   let user = { email: email, username: username, password: pass, name: name };
   let registrar = true;
+  let successRegisterMessage = document.querySelector("#successRegister");
+  let errorRegisterMessage = document.querySelector("#errorRegister");
   usuarios.forEach((element) => {
     if (element.email == user.email) {
       registrar = false;
@@ -56,10 +62,14 @@ function register() {
   });
   if (registrar == true) {
     usuarios.push(user);
-    document.querySelector("#successRegister").classList.remove("invisible");
+    successRegisterMessage.classList.remove("invisible");
+    setTimeout(()=>close(successRegisterMessage),4000); 
     back("register");
   } else {
-    document.querySelector("#errorRegister").classList.remove("invisible");
+    errorRegisterMessage.classList.remove("invisible");
+    setTimeout(() => {
+      close(errorRegisterMessage);
+    }, 4000);
     back("register");
   }
   console.log(usuarios);
@@ -81,4 +91,7 @@ function back(from) {
     default:
       console.log("there was an error selecting origin");
   }
+}
+function close(from) {
+  from.classList.add("invisible");
 }
